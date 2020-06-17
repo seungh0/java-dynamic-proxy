@@ -15,6 +15,7 @@ import java.lang.reflect.Proxy;
  * => 그래서 나온것이 Spring AOP
  *
  * 문제점2) 인터페이스만 프록시를 생성할 수 있음 (클래스로는 생성 불가능)
+ * => CGlib 라이브러리 사용 or ByteBuddy 라이브러리 사용
  */
 
 class BookServiceTest {
