@@ -1,20 +1,23 @@
 package me.will.proxypatttern;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
 class BookServiceTest {
 
-	@Autowired
-	private BookService bookService;
+	private BookService bookServiceProxy  = new BookServiceProxy(new DefaultBookService());
 
 	@Test
 	void rent() {
 		Book book = new Book();
 		book.setTitle("spring");
-		bookService.rent(book);
+		bookServiceProxy.rent(book);
+	}
+
+	@Test
+	void returnTest() {
+		Book book = new Book();
+		book.setTitle("spring");
+		bookServiceProxy.returnBook(book);
 	}
 
 }

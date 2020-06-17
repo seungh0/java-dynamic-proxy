@@ -1,16 +1,9 @@
 package me.will.proxypatttern;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+public interface BookService {
 
-@Service
-public class BookService {
+	void rent(Book book);
 
-	@Autowired
-	private BookRepository bookRepository;
-
-	public void rent(Book book) {
-		System.out.println("rent : " + book.getTitle());
-	}
+	void returnBook(Book book);
 
 }
