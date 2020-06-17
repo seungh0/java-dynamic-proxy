@@ -13,6 +13,8 @@ import java.lang.reflect.Proxy;
  * but) InvocationHandler() 코드가 지저분해질 수 있음.
  *
  * => 그래서 나온것이 Spring AOP
+ *
+ * 문제점2) 인터페이스만 프록시를 생성할 수 있음 (클래스로는 생성 불가능)
  */
 
 class BookServiceTest {
