@@ -28,6 +28,7 @@ dependencies {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
     implementation 'cglib.cglib'
+    implementation 'net.bytebuddy.byte-buddy'
 }
 
 test {
